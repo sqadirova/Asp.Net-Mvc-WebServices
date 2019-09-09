@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="InputService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:53229/InputService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:53229/InputService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:53229/InputService.svc?xsd=xsd2" namespace="urn:BankOfBaku" />
+      <xsd:import schemaLocation="http://localhost:53229/InputService.svc?xsd=xsd3" namespace="urn:BankOfBaku1" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IInputService_SaveEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IInputService_SaveEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInputService_UpdateEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IInputService_UpdateEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInputService_DeleteEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IInputService_DeleteEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInputService_SelectAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAll" />
+  </wsdl:message>
+  <wsdl:message name="IInputService_SelectAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInputService_SelectbyID_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectbyID" />
+  </wsdl:message>
+  <wsdl:message name="IInputService_SelectbyID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectbyIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInputService_Selectbydate_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selectbydate" />
+  </wsdl:message>
+  <wsdl:message name="IInputService_Selectbydate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectbydateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IInputService">
+    <wsdl:operation name="SaveEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInputService/SaveEmployee" message="tns:IInputService_SaveEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInputService/SaveEmployeeResponse" message="tns:IInputService_SaveEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInputService/UpdateEmployee" message="tns:IInputService_UpdateEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInputService/UpdateEmployeeResponse" message="tns:IInputService_UpdateEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInputService/DeleteEmployee" message="tns:IInputService_DeleteEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInputService/DeleteEmployeeResponse" message="tns:IInputService_DeleteEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInputService/SelectAll" message="tns:IInputService_SelectAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInputService/SelectAllResponse" message="tns:IInputService_SelectAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectbyID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInputService/SelectbyID" message="tns:IInputService_SelectbyID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInputService/SelectbyIDResponse" message="tns:IInputService_SelectbyID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selectbydate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInputService/Selectbydate" message="tns:IInputService_Selectbydate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInputService/SelectbydateResponse" message="tns:IInputService_Selectbydate_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IInputService" type="tns:IInputService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaveEmployee">
+      <soap:operation soapAction="http://tempuri.org/IInputService/SaveEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmployee">
+      <soap:operation soapAction="http://tempuri.org/IInputService/UpdateEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmployee">
+      <soap:operation soapAction="http://tempuri.org/IInputService/DeleteEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <soap:operation soapAction="http://tempuri.org/IInputService/SelectAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectbyID">
+      <soap:operation soapAction="http://tempuri.org/IInputService/SelectbyID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selectbydate">
+      <soap:operation soapAction="http://tempuri.org/IInputService/Selectbydate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InputService">
+    <wsdl:port name="BasicHttpBinding_IInputService" binding="tns:BasicHttpBinding_IInputService">
+      <soap:address location="http://localhost:53229/InputService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

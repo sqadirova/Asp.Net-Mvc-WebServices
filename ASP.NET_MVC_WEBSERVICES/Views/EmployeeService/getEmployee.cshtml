@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewBag.Title = "getEmployee";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Table V01</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="~/Table_Responsive_v1/Table_Responsive_v1/images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Table_Responsive_v1/Table_Responsive_v1/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Table_Responsive_v1/Table_Responsive_v1/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Table_Responsive_v1/Table_Responsive_v1/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Table_Responsive_v1/Table_Responsive_v1/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Table_Responsive_v1/Table_Responsive_v1/vendor/perfect-scrollbar/perfect-scrollbar.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Table_Responsive_v1/Table_Responsive_v1/css/util.css">
+    <link rel="stylesheet" type="text/css" href="~/Table_Responsive_v1/Table_Responsive_v1/css/main.css">
+    <!--===============================================================================================-->
+</head>
+<body>  
+    <div class="limiter">
+        <div class="container-table100">
+            <div class="wrap-table100">
+                <div class="table100">
+                    <table>
+                        <thead>
+                            <tr class="table100-head">
+                                <th align="center" class="column1">ID</th>
+                                <th class="column2">NAME</th>
+                                <th class="column3">BIRTHDATE</th>
+                                <th class="column4">GENDER</th>
+                                <th class="column6" colspan="2">ACTION</th>
+                            </tr>
+                   </thead>
+                <tbody>
+                     @foreach (var item in ViewBag.List)
+                     {
+                       <tr>
+                         <td class="column1">@item.Id</td>
+                          <td class="column2">@item.Name</td>
+                          <td class="column3">@item.BirthDate</td>
+                         <td class="column4">@item.Gender</td>
+                         <td>
+                           <button class="column5" style="color:dodgerblue; font-weight:bold; text-align:center; border:groove; background-color:whitesmoke;" type="button" onclick="location.href='updateEmployee?ID=@item.Id&&NAME=@item.Name&&BIRTHDATE=@item.BirthDate&&GENDER=@item.Gender'">Update</button>                         
+                         <td>
+                          <button class="column5" style=" font-weight:bold; text-align:center; border:groove; background-color:whitesmoke;" type="button">
+                          @Html.ActionLink("Delete", "deleteEmployee", new { id = item.Id },
+
+                         new { onclick = "return confirm('Are sure wants to delete?');" })
+                           </button>
+                          </td>
+
+                         </tr>
+                          }
+
+                    </tbody>
+                </table>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <!--===============================================================================================-->
+    <script src="~/Table_Responsive_v1/Table_Responsive_v1/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Table_Responsive_v1/Table_Responsive_v1/vendor/bootstrap/js/popper.js"></script>
+    <script src="~/Table_Responsive_v1/Table_Responsive_v1/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Table_Responsive_v1/Table_Responsive_v1/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Table_Responsive_v1/Table_Responsive_v1/js/main.js"></script>
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "selectbydate";
+}
+<h2>selectbydate</h2>
+    <form method="post" action="@Url.Action("selectbydate")">
+        <center>
+            BirthDate1:<input type="datetime-local" name="birthdate1" width="100px" />
+            BirthDate2:<input type="datetime-local" name="birthdate2" width="100px" />
+            <input type="submit" value="search" />
+        </center>
+        <link rel="stylesheet" type="text/css" href="~/CSS/Employee.css" />
+        <center><h2>Employee List</h2></center>
+        <table align="center" border="1" class="table">
+            <tr class="tr">
+                <th class="th">ID</th>
+                <th class="th">NAME</th>
+                <th class="th">BIRTH DATE</th>
+                <th class="th">GENDER</th>              
+            </tr>
+            @foreach (var item in ViewBag.List)
+            {
+                <tr class="tr">
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.BirthDate</td>
+                    <td>@item.Gender</td>                   
+                </tr>
+            }
+        </table>
+    </form>
+
+
+
+
+
+
+

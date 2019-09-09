@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53229/InputService.svc?xsd=xsd2" namespace="urn:BankOfBaku" />
+  <xs:import schemaLocation="http://localhost:53229/InputService.svc?xsd=xsd3" namespace="urn:BankOfBaku1" />
+  <xs:element name="SaveEmployee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="urn:BankOfBaku" minOccurs="0" name="employee" nillable="true" type="q1:Employee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveEmployeeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveEmployeeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEmployee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="urn:BankOfBaku" minOccurs="0" name="employee" nillable="true" type="q2:Employee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEmployeeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateEmployeeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteEmployee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="urn:BankOfBaku" minOccurs="0" name="employee" nillable="true" type="q3:Employee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteEmployeeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteEmployeeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="urn:BankOfBaku" minOccurs="0" name="SelectAllResult" nillable="true" type="q4:ArrayOfEmployee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectbyID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="urn:BankOfBaku" minOccurs="0" name="p" nillable="true" type="q5:Employee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectbyIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="urn:BankOfBaku" minOccurs="0" name="SelectbyIDResult" nillable="true" type="q6:ArrayOfEmployee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Selectbydate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="urn:BankOfBaku1" minOccurs="0" name="b1" nillable="true" type="q7:betweendate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectbydateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="urn:BankOfBaku" minOccurs="0" name="SelectbydateResult" nillable="true" type="q8:ArrayOfEmployee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

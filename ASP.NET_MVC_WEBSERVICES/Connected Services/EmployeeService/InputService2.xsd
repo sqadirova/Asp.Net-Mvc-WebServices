@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="urn:BankOfBaku1" elementFormDefault="qualified" targetNamespace="urn:BankOfBaku1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="betweendate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="birthdate1" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="birthdate2" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="betweendate" nillable="true" type="tns:betweendate" />
+</xs:schema>

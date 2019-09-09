@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4944bb0e-1699-466b-89c8-b5b513c99ad9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53229/InputService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="InputService.wsdl" MetadataType="Wsdl" ID="be2d8742-ab79-412a-8130-8e76ee92efb8" SourceId="1" SourceUrl="http://localhost:53229/InputService.svc?wsdl" />
+    <MetadataFile FileName="InputService.xsd" MetadataType="Schema" ID="1c499014-e1a2-46fc-bb08-ad9c47b10953" SourceId="1" SourceUrl="http://localhost:53229/InputService.svc?xsd=xsd2" />
+    <MetadataFile FileName="InputService1.xsd" MetadataType="Schema" ID="5fd4edcc-b337-4858-bbc2-1f80d45ea51c" SourceId="1" SourceUrl="http://localhost:53229/InputService.svc?xsd=xsd0" />
+    <MetadataFile FileName="InputService2.xsd" MetadataType="Schema" ID="a141db5d-c91f-4692-982c-06901d13ad2e" SourceId="1" SourceUrl="http://localhost:53229/InputService.svc?xsd=xsd3" />
+    <MetadataFile FileName="InputService3.xsd" MetadataType="Schema" ID="d7fdb583-166a-4abd-8410-a060a5bcd1fb" SourceId="1" SourceUrl="http://localhost:53229/InputService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
